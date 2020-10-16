@@ -1,0 +1,42 @@
+{
+  "name": "@antv/datasets",
+  "version": "0.0.1",
+  "description": "Open data set collection for AntV products",
+  "main": "lib/index.js",
+  "browser": "dist/index.js",
+  "module": "es/index.js",
+  "scripts": {
+    "build": "rm -rf lib && tsc --pretty",
+    "module": "rm -rf es && tsc -t ES5 -m ESNext --outDir es",
+    "api": "rm -rf typings && api-extractor run -v",
+    "pack": "rm -rf dist && rollup -c",
+    "prepublish": "npm run module && npm run api && npm run build && npm run pack",
+    "test": "jest --no-cache"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/antvis/data.git"
+  },
+  "keywords": [
+    "antv",
+    "data"
+  ],
+  "author": "https://github.com/orgs/antvis/people",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/antvis/data/issues"
+  },
+  "homepage": "https://github.com/antvis/data#readme",
+  "devDependencies": {
+    "@microsoft/api-extractor": "^7.10.4",
+    "@rollup/plugin-json": "^4.1.0",
+    "@types/jest": "^26.0.14",
+    "jest": "^26.5.3",
+    "rollup": "^2.31.0",
+    "rollup-plugin-sourcemaps": "^0.6.3",
+    "rollup-plugin-typescript2": "^0.27.3",
+    "ts-jest": "^26.4.1",
+    "tslib": "^2.0.3",
+    "typescript": "^4.0.3"
+  }
+}

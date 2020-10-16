@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "target": "ES5",
+    "module": "es2015",
+    "moduleResolution": "node",
+    "declaration": true,
+    "strict": true,
+    "outDir": "./lib",
+    "declarationDir": "./temp",
+    "inlineSourceMap": true,
+    "resolveJsonModule": true,
+    "allowSyntheticDefaultImports": true,
+    "importHelpers": true,
+  },
+  "include": ["./src"]
+}
