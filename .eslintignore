@@ -1,0 +1,9 @@
+.DS_Store
+node_modules/
+lib/
+es/
+dist/
+temp/
+typings/
+jest.config.js
+rollup.config.js
