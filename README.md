@@ -1,19 +1,26 @@
 # @antv/datasets
+
 Open data set collection for AntV products
 
-# script
+## Usage
 
-## install dependence
+
+## Dev
+
+### install dependence
+
 ```bash
 npm install
 ```
 
-## coverage of charts type
+### coverage of charts type
+
 ```bash
 npm run coverage
 ```
 
-## unit test
+### unit test
+
 ```bash
 npm run test
 ```

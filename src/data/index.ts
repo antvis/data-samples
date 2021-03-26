@@ -1,6 +1,7 @@
 import { DetailDataSets, DataSets, DataName } from "../interface";
 
-import city_gdp from "./city-gdp.json";
+// import city_gdp from "./city-gdp.json";
+import city_gdp from "./city-gdp";
 import area_sales from "./area-sales.json";
 import area_sales_type from "./area-sales-type.json";
 
@@ -22,8 +23,11 @@ function mapData(detailDataSamples: DetailDataSets): DataSets {
 export const DataSamples = mapData(DetailDataSamples);
 export function getDataPropsCombine(name: DataName) {
   const { fields, combine } = DetailDataSamples[name];
-  return combine.map(i => {
+  return combine.map((i) => {
     const fieldCombine = i.split("*");
-    return fieldCombine.map(f => fields[f]).sort().join("*");
-  })
+    return fieldCombine
+      .map((f) => fields[f])
+      .sort()
+      .join("*");
+  });
 }
