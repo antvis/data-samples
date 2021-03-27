@@ -1,33 +1,35 @@
-import { DetailDataSets, DataSets, DataName } from "../interface";
+import {
+  DetailDataSets,
+  DataSets,
+  DataName,
+  DataSample,
+  Data,
+} from "../interface";
 
-// import city_gdp from "./city-gdp.json";
-import city_gdp from "./city-gdp";
-import area_sales from "./area-sales.json";
-import area_sales_type from "./area-sales-type.json";
+import city_gdp from "./city-gdp/index";
+import area_sales from "./area-sales/index";
+import area_sales_type from "./area-sales-type/index";
 
-const DetailDataSamples: DetailDataSets = {
-  city_gdp: city_gdp as any,
-  area_sales: area_sales as any,
-  area_sales_type: area_sales_type as any,
+const DATA_SAMPLES: Record<DataName, DataSample> = {
+  city_gdp: city_gdp,
+  area_sales: area_sales,
+  area_sales_type: area_sales_type,
 };
 
-function mapData(detailDataSamples: DetailDataSets): DataSets {
-  const datasets: any = {};
-  let keys = Object.keys(detailDataSamples);
-  for (let i = 0; i < keys.length; i++) {
-    datasets[keys[i]] = detailDataSamples[keys[i] as DataName].data;
-  }
-  return datasets as DataSets;
-}
-
-export const DataSamples = mapData(DetailDataSamples);
 export function getDataPropsCombine(name: DataName) {
-  const { fields, combine } = DetailDataSamples[name];
-  return combine.map((i) => {
-    const fieldCombine = i.split("*");
-    return fieldCombine
-      .map((f) => fields[f])
+  const { fieldLOM, combine } = DATA_SAMPLES[name].info;
+  return combine.map((comb) => {
+    return comb
+      .map((f) => fieldLOM[f])
       .sort()
       .join("*");
   });
+}
+
+export function dataSample(dataName: DataName): DataSample {
+  return DATA_SAMPLES[dataName] as DataSample;
+}
+
+export function dataSampleData(dataName: DataName): Data {
+  return DATA_SAMPLES[dataName].data;
 }
