@@ -1,0 +1,62 @@
+[
+  {
+    "area": "east",
+    "type": "wholesale",
+    "sales": 1454715.81
+  },
+  {
+    "area": "east",
+    "type": "retail",
+    "sales": 2287358.26
+  },
+  {
+    "area": "middle-south",
+    "type": "wholesale",
+    "sales": 1335665.32
+  },
+  {
+    "area": "middle-south",
+    "type": "retail",
+    "sales": 2057936.76
+  },
+  {
+    "area": "north-east",
+    "type": "wholesale",
+    "sales": 834842.82
+  },
+  {
+    "area": "north-east",
+    "type": "retail",
+    "sales": 1323985.61
+  },
+  {
+    "area": "north",
+    "type": "wholesale",
+    "sales": 804769.46
+  },
+  {
+    "area": "north",
+    "type": "retail",
+    "sales": 1220430.56
+  },
+  {
+    "area": "south-west",
+    "type": "wholesale",
+    "sales": 469341.684
+  },
+  {
+    "area": "south-west",
+    "type": "retail",
+    "sales": 677302.89
+  },
+  {
+    "area": "north-west",
+    "type": "wholesale",
+    "sales": 253458.18
+  },
+  {
+    "area": "north-west",
+    "type": "retail",
+    "sales": 458058.11
+  }
+]

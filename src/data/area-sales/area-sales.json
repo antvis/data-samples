@@ -1,0 +1,26 @@
+[
+  {
+    "area": "east",
+    "sales": 4684506.44
+  },
+  {
+    "area": "middle-south",
+    "sales": 4137415.09
+  },
+  {
+    "area": "north-east",
+    "sales": 2681567.46
+  },
+  {
+    "area": "north",
+    "sales": 2447301.01
+  },
+  {
+    "area": "north-west",
+    "sales": 815039.59
+  },
+  {
+    "area": "south-west",
+    "sales": 1303124.51
+  }
+]

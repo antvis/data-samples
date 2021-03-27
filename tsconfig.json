@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     "target": "ES5",
-    "module": "es2015",
+    "module": "commonjs",
     "moduleResolution": "node",
     "declaration": true,
     "strict": true,
@@ -10,7 +10,7 @@
     "inlineSourceMap": true,
     "resolveJsonModule": true,
     "allowSyntheticDefaultImports": true,
-    "importHelpers": true,
+    "importHelpers": true
   },
   "include": ["./src", "./scripts"]
 }
