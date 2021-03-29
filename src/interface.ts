@@ -4,6 +4,9 @@ export const DATA_NAMES = [
   "city_gdp",
   "area_sales",
   "area_sales_type",
+  "cars",
+  "movies",
+  "weather",
 ] as const;
 export type DataName = typeof DATA_NAMES[number];
 export type AnyData = Record<string, any>[];
@@ -33,4 +36,5 @@ export interface DataSampleInfo<F extends string> {
 export interface DataSample {
   info: DataSampleInfo<any>;
   data: Data;
+  url?: string;
 }
