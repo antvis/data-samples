@@ -10,4 +10,7 @@ module.exports = {
   collectCoverageFrom: ['src/**/*.ts'],
   testRegex: '(/__tests__/.*\\.(test|spec))\\.ts$',
   verbose: false,
+  moduleNameMapper: {
+    '@src/(.*)': '<rootDir>/src/$1',
+  },
 };
