@@ -3,6 +3,7 @@
     "target": "ES5",
     "module": "es2015",
     "moduleResolution": "node",
+    "jsx": "preserve",
     "declaration": true,
     "strict": true,
     "outDir": "./lib",
@@ -10,7 +11,17 @@
     "inlineSourceMap": true,
     "resolveJsonModule": true,
     "allowSyntheticDefaultImports": true,
-    "importHelpers": true
+    "esModuleInterop": true,
+    "importHelpers": true,
+    "pretty": true,
+    "lib": ["DOM", "ESNext"],
+    "skipLibCheck": true,
+    "sourceRoot": "src",
+    "baseUrl": ".",
+    "paths": {
+      "@src/*": ["src/*"]
+    }
   },
-  "include": ["./src", "./scripts"]
+  "include": ["src/**/*", "__tests__/**/*", "scripts/**/*"],
+  "exclude": ["node_modules"]
 }

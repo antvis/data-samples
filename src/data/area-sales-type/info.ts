@@ -1,17 +1,17 @@
-import { DataSampleInfo } from "../../interface";
+import { DataSampleInfo } from '../../interface';
 
-const FIELD_NAMES = ["area", "sales", "type"] as const;
+const FIELD_NAMES = ['area', 'sales', 'type'] as const;
 type FieldName = typeof FIELD_NAMES[number];
 
 const info: DataSampleInfo<FieldName> = {
-  dataName: "city-gdp",
+  dataName: 'city-gdp',
   fieldNames: FIELD_NAMES,
   fieldLOM: {
-    area: "Nominal",
-    sales: "Interval",
-    type: "Nominal",
+    area: 'Nominal',
+    sales: 'Interval',
+    type: 'Nominal',
   },
-  combine: [["area", "sales", "type"]],
+  combine: [['area', 'sales', 'type']],
 };
 
 export default info;

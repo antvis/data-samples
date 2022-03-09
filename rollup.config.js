@@ -1,21 +1,17 @@
-import typescript from "rollup-plugin-typescript2"; // Rollup plugin for typescript with compiler errors
-import sourcemaps from "rollup-plugin-sourcemaps";
-import json from "@rollup/plugin-json"; // Converts .json files to ES6 modules
+import resolve from '@rollup/plugin-node-resolve';
+import commonjs from '@rollup/plugin-commonjs';
+import typescript from '@rollup/plugin-typescript';
+import { terser } from 'rollup-plugin-terser';
 
-export default {
-  input: "src/index.ts",
-  output: {
-    file: "dist/index.js",
-    format: "umd",
-    sourcemap: true,
-    name: "antvDatasets"
+module.exports = [
+  {
+    input: 'src/index.ts',
+    output: {
+      file: 'dist/index.min.js',
+      name: 'AntVDataSamples',
+      format: 'umd',
+      sourcemap: false,
+    },
+    plugins: [resolve(), commonjs(), typescript(), terser()],
   },
-  plugins: [
-    typescript({
-      exclude: "node_modules/**",
-      typescript: require("typescript"),
-    }),
-    sourcemaps(),
-    json(),
-  ],
-};
+];

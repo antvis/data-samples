@@ -1,13 +1,6 @@
-import { LevelOfMeasurement } from "@antv/knowledge";
+import { LevelOfMeasurement } from '@antv/knowledge';
 export { LevelOfMeasurement };
-export const DATA_NAMES = [
-  "city_gdp",
-  "area_sales",
-  "area_sales_type",
-  "cars",
-  "movies",
-  "weather",
-] as const;
+export const DATA_NAMES = ['city_gdp', 'area_sales', 'area_sales_type', 'cars', 'movies', 'weather'] as const;
 export type DataName = typeof DATA_NAMES[number];
 export type AnyData = Record<string, any>[];
 export type DataSets = Record<DataName, AnyData>;
@@ -20,10 +13,7 @@ export type DetailDataSets = Record<
   }
 >;
 
-export type DataRow = Record<
-  string,
-  string | number | boolean | undefined | null
->;
+export type DataRow = Record<string, string | number | boolean | undefined | null>;
 export type Data = DataRow[];
 
 export interface DataSampleInfo<F extends string> {

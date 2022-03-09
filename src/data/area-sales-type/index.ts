@@ -1,6 +1,6 @@
-import { DataSample } from "../../interface";
-import info from "./info";
-import * as data from "./area-sales-type.json";
+import { DataSample } from '../../interface';
+import info from './info';
+import * as data from './area-sales-type.json';
 
 const dataSample: DataSample = {
   info: info,

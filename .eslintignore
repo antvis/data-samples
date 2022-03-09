@@ -7,3 +7,5 @@ temp/
 typings/
 jest.config.js
 rollup.config.js
+**/bundle.js
+**/*.min.js
