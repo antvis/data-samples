@@ -1,7 +1,2 @@
-export {
-  getDataPropsCombine,
-  dataSample,
-  dataSampleData,
-  dataSampleUrl,
-} from "./data";
-export { DataName } from "./interface";
+export { getDataPropsCombine, dataSample, dataSampleData, dataSampleUrl } from './data';
+export { DataName } from './interface';

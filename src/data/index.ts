@@ -1,11 +1,11 @@
-import { DataName, DataSample, Data } from "../interface";
+import { DataName, DataSample, Data } from '../interface';
 
-import city_gdp from "./city-gdp/index";
-import area_sales from "./area-sales/index";
-import area_sales_type from "./area-sales-type/index";
-import cars from "./cars";
-import movies from "./movies";
-import weather from "./weather";
+import city_gdp from './city-gdp/index';
+import area_sales from './area-sales/index';
+import area_sales_type from './area-sales-type/index';
+import cars from './cars';
+import movies from './movies';
+import weather from './weather';
 
 const DATA_SAMPLES: Record<DataName, DataSample> = {
   city_gdp: city_gdp,
@@ -22,7 +22,7 @@ export function getDataPropsCombine(name: DataName) {
     return comb
       .map((f) => fieldLOM[f])
       .sort()
-      .join("*");
+      .join('*');
   });
 }
 
@@ -35,5 +35,5 @@ export function dataSampleData(dataName: DataName): Data {
 }
 
 export function dataSampleUrl(dataName: DataName): string {
-  return DATA_SAMPLES[dataName].url || "";
+  return DATA_SAMPLES[dataName].url || '';
 }
