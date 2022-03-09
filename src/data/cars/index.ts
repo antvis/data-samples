@@ -1,10 +1,7 @@
-import { DataSample } from '../../interface';
-import info from './info';
-import * as data from './cars.min.json';
+import type { DataSample } from '../interface';
 
 const dataSample: DataSample = {
-  info: info,
-  data: data,
+  name: 'cars',
   url: 'https://gw.alipayobjects.com/os/antfincdn/f%24%24iHBfGS5/cars.min.json',
 };
 

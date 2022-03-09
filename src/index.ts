@@ -1,2 +1,3 @@
-export { getDataPropsCombine, dataSample, dataSampleData, dataSampleUrl } from './data';
-export { DataName } from './interface';
+export * as dataSamples from './data';
+
+export * from './group';
