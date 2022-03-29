@@ -1,5 +1,4 @@
-
-import * as data from './stripplot-test-data.json'
+import * as data from './stripplot-test-data.json';
 
 import type { DataSample } from '../../interface';
 

@@ -1,5 +1,4 @@
-
-import * as data from './compact_trellis_grid_bar_charts-test-data.json'
+import * as data from './compact_trellis_grid_bar_charts-test-data.json';
 
 import type { DataSample } from '../../interface';
 
