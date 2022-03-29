@@ -1,5 +1,4 @@
-
-import * as data from './diverging_stacked_bar_chart-test-data.json'
+import * as data from './diverging_stacked_bar_chart-test-data.json';
 
 import type { DataSample } from '../../interface';
 

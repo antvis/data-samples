@@ -1,27 +1,53 @@
-import scatter_plotTestData from './scatter_plot-test';
-import bar_chartTestData from './bar_chart-test';
+import scatterPlotTestData from './scatter_plot-test';
+import barChartTestData from './bar_chart-test';
 import heatmapTestData from './heatmap-test';
 import histogramTestData from './histogram-test';
-import line_chartTestData from './line_chart-test';
-import stacked_area_chartTestData from './stacked_area_chart-test';
-import strip_plotTestData from './strip_plot-test';
-import compact_trellis_grid_bar_chartsTestData from './compact_trellis_grid_bar_charts-test';
-import diverging_stacked_bar_chartTestData from './diverging_stacked_bar_chart-test';
-import grouped_bar_chartTestData from './grouped_bar_chart-test';
-import layered_bar_chartTestData from './layered_bar_chart-test';
-import stacked_bar_chartTestData from './stacked_bar_chart-test';
-import trellis_stacked_bar_chartTestData from './trellis_stacked_bar_chart-test';
-import step_line_chartTestData from './step_line_chart-test';
-import multi_series_line_chartTestData from './multi_series_line_chart-test';
-import layered_area_chartTestData from './layered_area_chart-test';
-import density_stack_chartTestData from './density_stack_chart-test';
-import stream_chartTestData from './stream_chart-test';
-import pie_chartTestData from './pie_chart-test';
-import donut_chartTestData from './donut_chart-test';
-import bubble_chartTestData from './bubble_chart-test';
-import multifeature_scatter_plotTestData from './multifeature_scatter_plot-test';
-import scatter_matrixTestData from './scatter_matrix-test';
+import lineChartTestData from './line_chart-test';
+import stackedAreaChartTestData from './stacked_area_chart-test';
+import stripPlotTestData from './strip_plot-test';
+import compactTrellisGridBarChartsTestData from './compact_trellis_grid_bar_charts-test';
+import divergingStackedBarChartTestData from './diverging_stacked_bar_chart-test';
+import groupedBarChartTestData from './grouped_bar_chart-test';
+import layeredBarChartTestData from './layered_bar_chart-test';
+import stackedBarChartTestData from './stacked_bar_chart-test';
+import trellisStackedBarChartTestData from './trellis_stacked_bar_chart-test';
+import stepLineChartTestData from './step_line_chart-test';
+import multiSeriesLineChartTestData from './multi_series_line_chart-test';
+import layeredAreaChartTestData from './layered_area_chart-test';
+import densityStackChartTestData from './density_stack_chart-test';
+import streamChartTestData from './stream_chart-test';
+import pieChartTestData from './pie_chart-test';
+import donutChartTestData from './donut_chart-test';
+import bubbleChartTestData from './bubble_chart-test';
+import multifeatureScatterPlotTestData from './multifeature_scatter_plot-test';
+import scatterMatrixTestData from './scatter_matrix-test';
 import stripplotTestData from './stripplot-test';
-import trellis_scatter_plotTestData from './trellis_scatter_plot-test';
+import trellisScatterPlotTestData from './trellis_scatter_plot-test';
 
-export { scatter_plotTestData, bar_chartTestData, heatmapTestData, histogramTestData, line_chartTestData, stacked_area_chartTestData, strip_plotTestData, compact_trellis_grid_bar_chartsTestData, diverging_stacked_bar_chartTestData, grouped_bar_chartTestData, layered_bar_chartTestData, stacked_bar_chartTestData, trellis_stacked_bar_chartTestData, step_line_chartTestData, multi_series_line_chartTestData, layered_area_chartTestData, density_stack_chartTestData, stream_chartTestData, pie_chartTestData, donut_chartTestData, bubble_chartTestData, multifeature_scatter_plotTestData, scatter_matrixTestData, stripplotTestData, trellis_scatter_plotTestData };
+export {
+  scatterPlotTestData,
+  barChartTestData,
+  heatmapTestData,
+  histogramTestData,
+  lineChartTestData,
+  stackedAreaChartTestData,
+  stripPlotTestData,
+  compactTrellisGridBarChartsTestData,
+  divergingStackedBarChartTestData,
+  groupedBarChartTestData,
+  layeredBarChartTestData,
+  stackedBarChartTestData,
+  trellisStackedBarChartTestData,
+  stepLineChartTestData,
+  multiSeriesLineChartTestData,
+  layeredAreaChartTestData,
+  densityStackChartTestData,
+  streamChartTestData,
+  pieChartTestData,
+  donutChartTestData,
+  bubbleChartTestData,
+  multifeatureScatterPlotTestData,
+  scatterMatrixTestData,
+  stripplotTestData,
+  trellisScatterPlotTestData,
+};
