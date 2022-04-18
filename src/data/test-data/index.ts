@@ -23,6 +23,8 @@ import multifeatureScatterPlotTestData from './multifeature_scatter_plot-test';
 import scatterMatrixTestData from './scatter_matrix-test';
 import stripplotTestData from './stripplot-test';
 import trellisScatterPlotTestData from './trellis_scatter_plot-test';
+import areaChartTestData from './area_chart-test';
+import columnChartTestData from './column_chart-test';
 
 export {
   scatterPlotTestData,
@@ -50,4 +52,6 @@ export {
   scatterMatrixTestData,
   stripplotTestData,
   trellisScatterPlotTestData,
+  areaChartTestData,
+  columnChartTestData,
 };
