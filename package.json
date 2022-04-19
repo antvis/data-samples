@@ -26,7 +26,8 @@
     "build": "run-p build:*",
     "prepublish": "npm run build",
     "prepare": "husky install",
-    "size": "limit-size"
+    "size": "limit-size",
+    "start:demo": "cd demo && npm run start"
   },
   "repository": {
     "type": "git",

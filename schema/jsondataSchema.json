@@ -1,0 +1,15 @@
+{
+  "$ref": "#/definitions/JSONData",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "definitions": {
+    "JSONData": {
+      "items": {
+        "$ref": "#/definitions/DataRow"
+      },
+      "type": "array"
+    },
+    "DataRow": {
+      "type": "object"
+    }
+  }
+}
