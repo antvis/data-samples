@@ -1,67 +1,8 @@
-import cityGdp from './city-gdp';
-import areaSales from './area-sales';
-import areaSalesType from './area-sales-type';
-import cars from './cars';
-import movies from './movies';
-import weather from './weather';
-import {
-  scatterPlotTestData,
-  barChartTestData,
-  heatmapTestData,
-  histogramTestData,
-  lineChartTestData,
-  stackedAreaChartTestData,
-  stripPlotTestData,
-  compactTrellisGridBarChartsTestData,
-  divergingStackedBarChartTestData,
-  groupedBarChartTestData,
-  layeredBarChartTestData,
-  stackedBarChartTestData,
-  trellisStackedBarChartTestData,
-  stepLineChartTestData,
-  multiSeriesLineChartTestData,
-  layeredAreaChartTestData,
-  densityStackChartTestData,
-  streamChartTestData,
-  pieChartTestData,
-  donutChartTestData,
-  bubbleChartTestData,
-  multifeatureScatterPlotTestData,
-  scatterMatrixTestData,
-  stripplotTestData,
-  trellisScatterPlotTestData,
-} from './test-data';
+/* chart - testing data samples for different chart types. */
+export * as chart from './chart';
 
-export {
-  cityGdp,
-  areaSales,
-  areaSalesType,
-  cars,
-  movies,
-  weather,
-  scatterPlotTestData,
-  barChartTestData,
-  heatmapTestData,
-  histogramTestData,
-  lineChartTestData,
-  stackedAreaChartTestData,
-  stripPlotTestData,
-  compactTrellisGridBarChartsTestData,
-  divergingStackedBarChartTestData,
-  groupedBarChartTestData,
-  layeredBarChartTestData,
-  stackedBarChartTestData,
-  trellisStackedBarChartTestData,
-  stepLineChartTestData,
-  multiSeriesLineChartTestData,
-  layeredAreaChartTestData,
-  densityStackChartTestData,
-  streamChartTestData,
-  pieChartTestData,
-  donutChartTestData,
-  bubbleChartTestData,
-  multifeatureScatterPlotTestData,
-  scatterMatrixTestData,
-  stripplotTestData,
-  trellisScatterPlotTestData,
-};
+/* story - small data samples with some business story embedded in them. */
+export * as story from './story';
+
+/* url - remote large classic datasets via URL. */
+export * as url from './url';

@@ -7,6 +7,7 @@ import { ChartAdvisor } from '@antv/chart-advisor';
 import { specToG2Plot } from '@antv/antv-spec';
 import jsondataSchema from '../../schema/jsondataSchema.json';
 import { dataPresets } from './presets';
+
 import './index.less';
 
 const { Option } = Select;

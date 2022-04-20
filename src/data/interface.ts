@@ -1,12 +1,12 @@
 export type DataRow = Record<string, string | number | boolean | undefined | null>;
 export type Data = DataRow[];
 
-type DataSampleWithFile = {
+export type DataSampleWithFile = {
   name: string;
   data: Data;
 };
 
-type DataSampleWithUrl = {
+export type DataSampleWithUrl = {
   name: string;
   url: string;
 };
