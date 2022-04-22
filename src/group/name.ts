@@ -1,4 +1,5 @@
 import * as ds from '../data';
+import { Data } from '../interface';
 
 function allDataEntities() {
   const dataEntities: any = {};
@@ -16,21 +17,21 @@ function allDataEntities() {
   return dataEntities;
 }
 
-const DATA_SAMPLES_BY_NAME = allDataEntities();
+export const DATA_SAMPLES_BY_NAME = allDataEntities();
 
-export function dataByName(name: string) {
+export async function dataByName(name: string): Promise<Data> {
   if (!Object.keys(DATA_SAMPLES_BY_NAME).includes(name)) {
     throw new Error(`Data Sample with name ${name} is NOT FOUND.`);
   }
 
-  let data = [];
+  let data: Data = [];
 
   const entity = DATA_SAMPLES_BY_NAME[name];
 
   if (entity.data) {
     data = entity.data;
   } else if (entity.url) {
-    fetch(entity.url)
+    await fetch(entity.url)
       .then((res) => res.json())
       .then((urlData) => {
         data = urlData;

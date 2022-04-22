@@ -1,9 +1,9 @@
 import { chart as cd } from '../data';
 
 import type { ChartID } from '@antv/ckb';
-import type { Data } from '@src/data/interface';
+import type { Data } from '@src/interface';
 
-const DATA_FOR_CHART_TYPE: Partial<Record<ChartID, Data>> = {
+export const DATA_FOR_CHART_TYPE: Partial<Record<ChartID, Data>> = {
   // pie
   pie_chart: cd.pieChartTestData.data,
   donut_chart: cd.donutChartTestData.data,

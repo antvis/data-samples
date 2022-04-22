@@ -1,0 +1,29 @@
+.visualize-view {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+
+  .chart-preview-scroll {
+    flex: 1;
+    max-height: 140px;
+    min-height: 120px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    overflow-x: scroll;
+  }
+
+  .chart {
+    height: 100%;
+    flex: 1;
+    padding: 20px;
+
+    .chart-view {
+      background-color: #fff;
+      padding: 20px;
+      border: 1px solid #eee;
+    }
+  }
+}

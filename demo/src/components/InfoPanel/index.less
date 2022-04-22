@@ -1,0 +1,27 @@
+.info-panel {
+  padding: 10px;
+  flex: 1;
+  overflow: hidden;
+
+  > .ant-tabs-card {
+    height: 100%;
+
+    .ant-tabs-content-holder {
+      background: #fff;
+    }
+
+    .ant-tabs-content {
+      height: 100%;
+      margin-top: -16px;
+
+      > .ant-tabs-tabpane {
+        padding: 16px;
+        background: #fff;
+      }
+    }
+
+    > .ant-tabs-nav::before {
+      display: none;
+    }
+  }
+}

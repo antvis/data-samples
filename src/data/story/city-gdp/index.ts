@@ -1,6 +1,6 @@
 import data from './city-gdp.json';
 
-import type { DataSampleWithFile } from '../../interface';
+import type { DataSampleWithFile } from '../../../interface';
 
 const dataSample: DataSampleWithFile = {
   name: 'city-dgp',
