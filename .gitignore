@@ -81,3 +81,7 @@ temp
 
 # ignore dist files
 .vscode/
+
+# demo - gh-pages
+demo/public/*
+!demo/public/index.html
