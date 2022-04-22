@@ -42,7 +42,7 @@ export const EditorView: React.FC<EditorViewProps> = ({ prefixCls = 'editorview'
         value={dataInString}
         editorWillMount={editorWillMount}
         onChange={onChange}
-        options={{ readOnly: true }}
+        options={{ readOnly: true, automaticLayout: true }}
       />
     </div>
   );
