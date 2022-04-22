@@ -1,6 +1,6 @@
 import data from './multifeature_scatter_plot-test-data.json';
 
-import type { DataSampleWithFile } from '../../interface';
+import type { DataSampleWithFile } from '../../../interface';
 
 const dataSample: DataSampleWithFile = {
   name: 'multifeature_scatter_plot-test-data',

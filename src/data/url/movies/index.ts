@@ -1,4 +1,4 @@
-import type { DataSampleWithUrl } from '../../interface';
+import type { DataSampleWithUrl } from '../../../interface';
 
 const dataSample: DataSampleWithUrl = {
   name: 'movies',

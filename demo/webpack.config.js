@@ -18,7 +18,6 @@ const devConfig = {
   externals: {
     react: 'React',
     'react-dom': 'ReactDOM',
-    antd: 'antd',
   },
   target: 'web',
   resolve: {

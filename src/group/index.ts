@@ -1,2 +1,2 @@
-export { dataByChartId } from './chartId';
-export { dataByName } from './name';
+export * from './chartId';
+export * from './name';

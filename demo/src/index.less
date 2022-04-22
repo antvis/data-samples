@@ -1,30 +1,22 @@
 @import 'antd/dist/antd.less';
 
-.vis-wrapper {
-  position: relative;
-  height: 600px;
-  width: 100%;
-  overflow: hidden;
-  flex: 5;
-}
-
-.vis {
-  position: absolute;
+#root {
   height: 100%;
-  width: 100%;
-}
 
-.vis-mask {
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  background-color: rgba(141, 65, 65, 0.5);
-  bottom: -100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  h2 {
-    color: black;
+  .ant-layout {
+    height: 100%;
   }
+}
+
+.the-content {
+  display: flex;
+  flex-direction: row;
+}
+
+.cute-divider {
+  height: 60px;
+  width: 4px;
+  border-radius: 2px;
+  background-color: rgba(0, 0, 0, 0.06);
+  align-self: center;
 }
