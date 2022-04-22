@@ -111,7 +111,7 @@ export const DataPanel: React.FC = () => {
   );
 
   // if filter by chartId, show 'chartId: dsName'
-  const selectedDsText = `${curFilter === 'chartId' && `${curDataSampleName}: `}${
+  const selectedDsText = `${curFilter === 'chartId' ? `${curDataSampleName}: ` : ''}${
     curFilter === 'chartId' ? (DATA_SAMPLES_BY_CHART_ID as any)[curDataSampleName]?.name || '' : curDataSampleName
   }`;
 
