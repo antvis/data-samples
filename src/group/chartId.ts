@@ -13,17 +13,17 @@ export const DATA_FOR_CHART_TYPE: Partial<Record<ChartID, Data>> = {
   // area
   area_chart: cd.areaChartTestData.data,
   stacked_area_chart: cd.stackedAreaChartTestData.data,
-  // TODO percent_stacked_area_chart:cd.?
+  percent_stacked_area_chart: cd.stackedAreaChartTestData.data,
   // bar
   bar_chart: cd.barChartTestData.data,
   grouped_bar_chart: cd.groupedBarChartTestData.data,
   stacked_bar_chart: cd.stackedBarChartTestData.data,
-  // TODO percent_stacked_bar_chart:cd.?
+  percent_stacked_bar_chart: cd.stackedBarChartTestData.data,
   // column
   column_chart: cd.columnChartTestData.data,
   grouped_column_chart: cd.groupedBarChartTestData.data,
-  // TODO stacked_column_chart:cd.?
-  // TODO percent_stacked_column_chart:cd.?
+  stacked_column_chart: cd.stackedBarChartTestData.data,
+  percent_stacked_column_chart: cd.stackedBarChartTestData.data,
   // scatter
   scatter_plot: cd.scatterPlotTestData.data,
   // bubble
