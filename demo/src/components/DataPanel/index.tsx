@@ -3,7 +3,13 @@ import React, { useContext, useEffect, useState } from 'react';
 import { Menu } from 'antd';
 import { DownOutlined, BookOutlined, LinkOutlined, PieChartOutlined, AppstoreOutlined } from '@ant-design/icons';
 
-import { DATA_SAMPLES_BY_NAME, DATA_FOR_CHART_TYPE, dataByName, dataSamples } from '../../../../src';
+import {
+  DATA_SAMPLES_BY_NAME,
+  DATA_SAMPLES_BY_CHART_ID,
+  dataByName,
+  dataSamples,
+  dataByChartId,
+} from '../../../../src';
 
 import { MetaContext } from '../../contexts';
 import { LabelDropDown } from '../LabelDropDown';
@@ -28,7 +34,7 @@ function getDataSampleNamesByFilter(filter: Filter): string[] {
 
     // by group
     case 'chartId':
-      return Object.keys(DATA_FOR_CHART_TYPE);
+      return Object.keys(DATA_SAMPLES_BY_CHART_ID);
     case 'name':
     case 'all':
     default:
@@ -60,7 +66,13 @@ export const DataPanel: React.FC = () => {
 
   useEffect(() => {
     const getData = async () => {
-      const data = await dataByName(curDataSampleName);
+      let data = [];
+      if (curFilter === 'chartId') {
+        data = await dataByChartId(curDataSampleName as any);
+      } else {
+        data = await dataByName(curDataSampleName);
+      }
+
       setDataInString(formatJSONObject(data));
     };
 
@@ -98,11 +110,16 @@ export const DataPanel: React.FC = () => {
     </Menu>
   );
 
+  // if filter by chartId, show 'chartId: dsName'
+  const selectedDsText = `${curFilter === 'chartId' && `${curDataSampleName}: `}${
+    curFilter === 'chartId' ? (DATA_SAMPLES_BY_CHART_ID as any)[curDataSampleName]?.name || '' : curDataSampleName
+  }`;
+
   return (
     <div className="data-panel">
       <div className="filter-section">
         <LabelDropDown label="Filter" menu={filterMenu} icon={<DownOutlined />} selected={curFilter} />
-        <LabelDropDown label="Data Sample" menu={dataSampleMenu} icon={<DownOutlined />} selected={curDataSampleName} />
+        <LabelDropDown label="Data Sample" menu={dataSampleMenu} icon={<DownOutlined />} selected={selectedDsText} />
       </div>
       {dataInString && <EditorView className="editor" />}
     </div>
