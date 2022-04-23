@@ -1,7 +1,14 @@
 import React, { useContext, useEffect, useState } from 'react';
 
-import { Menu } from 'antd';
-import { DownOutlined, BookOutlined, LinkOutlined, PieChartOutlined, AppstoreOutlined } from '@ant-design/icons';
+import { Menu, Button, Drawer } from 'antd';
+import {
+  DownOutlined,
+  BookOutlined,
+  LinkOutlined,
+  PieChartOutlined,
+  AppstoreOutlined,
+  CloseOutlined,
+} from '@ant-design/icons';
 
 import {
   DATA_SAMPLES_BY_NAME,
@@ -14,6 +21,7 @@ import {
 import { MetaContext } from '../../contexts';
 import { LabelDropDown } from '../LabelDropDown';
 import { EditorView } from '../EditorView';
+import { ChartIdTestBoard } from '../ChartIdTestBoard';
 import { formatJSONObject } from '../../utils';
 
 import type { MenuProps } from 'antd';
@@ -49,6 +57,16 @@ export const DataPanel: React.FC = () => {
   const [curFilter, setCurFilter] = useState<Filter>('all');
   /** Dropdown 2 */
   const [curDataSampleName, setCurDataSampleName] = useState<string>(getDataSampleNamesByFilter(curFilter)[0]);
+  /** Modal for ChartId Test Board */
+  const [isChartIdTestBoardVisible, setIsChartIdTestBoardVisible] = useState<boolean>(false);
+
+  const showChartIdTestBoard = () => {
+    setIsChartIdTestBoardVisible(true);
+  };
+
+  const handleChartIdTestBoardClose = () => {
+    setIsChartIdTestBoardVisible(false);
+  };
 
   const handleFilterMenuClick: MenuProps['onClick'] = ({ key }) => {
     const filter = key as Filter;
@@ -115,13 +133,40 @@ export const DataPanel: React.FC = () => {
     curFilter === 'chartId' ? (DATA_SAMPLES_BY_CHART_ID as any)[curDataSampleName]?.name || '' : curDataSampleName
   }`;
 
+  const ShowChartIdTestBoardBtn = () => (
+    <Button type="primary" ghost size="small" shape="round" onClick={showChartIdTestBoard}>
+      Test Board
+    </Button>
+  );
+
+  const chartIdFilterOps = [<ShowChartIdTestBoardBtn key="chartid-test-board-btn" />];
+
   return (
-    <div className="data-panel">
-      <div className="filter-section">
-        <LabelDropDown label="Filter" menu={filterMenu} icon={<DownOutlined />} selected={curFilter} />
-        <LabelDropDown label="Data Sample" menu={dataSampleMenu} icon={<DownOutlined />} selected={selectedDsText} />
+    <>
+      <div className="data-panel">
+        <div className="filter-section">
+          <LabelDropDown
+            label="Filter"
+            menu={filterMenu}
+            icon={<DownOutlined />}
+            selected={curFilter}
+            operatorComponents={curFilter === 'chartId' ? chartIdFilterOps : []}
+          />
+          <LabelDropDown label="Data Sample" menu={dataSampleMenu} icon={<DownOutlined />} selected={selectedDsText} />
+        </div>
+        {dataInString && <EditorView className="editor" />}
       </div>
-      {dataInString && <EditorView className="editor" />}
-    </div>
+      <Drawer
+        title="ChartID Test Board"
+        placement="bottom"
+        closable={false}
+        visible={isChartIdTestBoardVisible}
+        key="chartid-test-board"
+        height="100vh"
+        extra={<Button icon={<CloseOutlined />} size="large" onClick={handleChartIdTestBoardClose} />}
+      >
+        <ChartIdTestBoard />
+      </Drawer>
+    </>
   );
 };

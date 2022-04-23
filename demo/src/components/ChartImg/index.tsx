@@ -4,7 +4,7 @@ import { ChartAntVSpec } from '@antv/antv-spec';
 import { Spin } from 'antd';
 import { LoadingOutlined } from '@ant-design/icons';
 
-import { specToDataURL } from '../../utils';
+import { specToDataURL, fulfillWithTimeLimit } from '../../utils';
 
 interface ChartImgProps extends React.ImgHTMLAttributes<HTMLImageElement> {
   spec: ChartAntVSpec;
@@ -23,19 +23,16 @@ export const ChartImg = (props: ChartImgProps) => {
 
   useEffect(() => {
     const genImgData = async () => {
-      const imgData = await specToDataURL(spec, { tempDomStyle });
+      const imgData = await fulfillWithTimeLimit(20000, specToDataURL(spec, { tempDomStyle }), '');
 
-      setSrc(imgData);
+      setLoading(false);
+      if (imgData) {
+        setSrc(imgData);
+      }
     };
 
     genImgData();
   }, []);
-
-  useEffect(() => {
-    if (src !== NO_CHART_IMG_DATA) {
-      setLoading(false);
-    }
-  }, [src]);
 
   return (
     <Spin spinning={loading} indicator={antIcon}>

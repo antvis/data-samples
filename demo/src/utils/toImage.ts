@@ -35,7 +35,12 @@ export async function specToDataURL(spec: ChartAntVSpec, options: specToDataUrlO
 
   document.body.appendChild(tempDom);
 
-  specToG2Plot(spec, tempDom);
+  try {
+    specToG2Plot(spec, tempDom);
+  } catch (error) {
+    return '';
+  }
+
   await sleep(400);
 
   const canvas = await html2canvas(tempDom as HTMLElement);

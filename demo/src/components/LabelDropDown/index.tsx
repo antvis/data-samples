@@ -11,15 +11,17 @@ interface Props {
   menu: DropDownProps['overlay'];
   icon: DropdownButtonProps['icon'];
   selected: string;
+  operatorComponents?: React.ReactNode[];
 }
 
-export const LabelDropDown: React.FC<Props> = ({ label, menu, icon, selected, ...restProps }) => {
+export const LabelDropDown: React.FC<Props> = ({ label, menu, icon, selected, operatorComponents, ...restProps }) => {
   return (
     <div {...restProps} className="label-dropdown">
       <Dropdown.Button overlay={menu} icon={icon} placement="bottomLeft">
         {label}
       </Dropdown.Button>
       <span className="ldd-label">{selected}</span>
+      <div className="ldd-ops">{operatorComponents}</div>
     </div>
   );
 };
