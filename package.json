@@ -1,6 +1,6 @@
 {
   "name": "@antv/data-samples",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Open data set collection for AntV products",
   "main": "lib/index.js",
   "module": "esm/index.js",
