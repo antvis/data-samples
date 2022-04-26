@@ -4,10 +4,10 @@
     "module": "commonjs",
     "moduleResolution": "node",
     "jsx": "preserve",
-    "declaration": true,
     "strict": true,
     "outDir": "./lib",
-    "declarationDir": "./temp",
+    "declaration": true,
+    "declarationDir": "./lib",
     "inlineSourceMap": true,
     "resolveJsonModule": true,
     "allowSyntheticDefaultImports": true,
@@ -22,6 +22,6 @@
       "@src/*": ["src/*"]
     }
   },
-  "include": ["src/**/*", "__tests__/**/*", "scripts/**/*"],
+  "include": ["./src"],
   "exclude": ["node_modules"]
 }
